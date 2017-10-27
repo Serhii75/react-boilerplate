@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+@import './colors.scss';
+
+body {
+  background: $background;
+  font-family: 'Roboto', sans-serif;
+}
+
+div {
+  text-align: center;
+}
+
+img {
+  max-width: 600px;
+}
