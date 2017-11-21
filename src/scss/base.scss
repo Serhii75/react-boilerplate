@@ -10,6 +10,14 @@ div {
   text-align: center;
 }
 
+div h1 {
+  transition: 0.3s;
+}
+
+div h1:hover {
+  color: #0000ff;
+}
+
 img {
   max-width: 600px;
 }
