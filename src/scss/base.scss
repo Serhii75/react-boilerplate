@@ -1,23 +1,131 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,500&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 @import './colors.scss';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: $background;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
-div {
-  text-align: center;
+ul {
+  list-style-type: none;
+  li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '-',
+  }
 }
 
-div h1 {
-  transition: 0.3s;
+a {
+  color: $mainColor;
+  text-decoration: none;
+  transition: all 0.4s;
 }
 
-div h1:hover {
-  color: #0000ff;
+a:hover {
+  color: $linkHoverColor;
+  text-decoration: underline;
 }
 
-img {
-  max-width: 600px;
+code {
+  background-color: $codeBgColor;
+  color: $codeColor;
+  padding: 0 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 6rem;
+}
+
+header {
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    word-spacing: 1.5rem;
+    color: $mainColor;
+    text-shadow: 2px 2px 4px $darkerColor;
+  }
+}
+
+.content {
+  background-color: $darkerColor;
+  color: $textColor;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 6rem auto 5rem;
+  box-shadow: 2px 2px 4px $darkColor;
+  font-size: 1.5rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+footer {
+  display: none;
+
+  h3 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    color: $mainColor;
+    text-shadow: 2px 2px 4px $darkerColor;
+  }
+}
+
+@media (min-width: 576px) {
+  header {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  .content {
+    margin-bottom: 5rem;
+  }
+
+  footer {
+    display: block;
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    h1 {
+      font-size: 5rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .content {
+    margin-bottom: 6rem;
+  }
+
+  footer {
+    h3 {
+      font-size: 4rem;
+    }
+  }
 }
